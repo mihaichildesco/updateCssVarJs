@@ -4,12 +4,6 @@
   --blur: 10px;
 }
 
-img {
-  padding: var(--spacing);
-  background: var(--base);
-  filter: blur(var(--blur));
-}
-
 .hl {
   color: var(--base);
 }
@@ -37,4 +31,33 @@ a {
 
 input {
   width: 100px;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 30px;
+  }
+  input {
+    width: 80px;
+  }
+
+  .controls {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
 }
